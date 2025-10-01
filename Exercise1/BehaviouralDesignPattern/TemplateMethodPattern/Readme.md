@@ -1,21 +1,75 @@
 # Template Method Pattern - Workout Routine
 
 ## Overview
-The **Template Method Pattern** defines the skeleton of an algorithm in a base class, allowing subclasses to implement specific steps.  
-In this project, the algorithm is a **workout routine**: warm-up → main exercise → cool-down. The **main exercise** step is implemented by subclasses.
+This project demonstrates the **Template Method Design Pattern** in Java.  
+The Template Method Pattern defines the **skeleton of an algorithm** in a base class, allowing subclasses to override specific steps without changing the overall structure.
 
-## Files
-- **WorkoutRoutine.java**: Abstract class with template method `performRoutine()`. Implements common steps (`warmUp`, `coolDown`) and declares abstract `mainExercise()`.
-- **CardioWorkout.java**: Subclass implementing `mainExercise()` as 20 minutes of running.
-- **StrengthWorkout.java**: Subclass implementing `mainExercise()` as 15 minutes of weight training.
-- **Client.java**: Client code demonstrating the pattern by performing cardio and strength routines.
+In this example, the algorithm is a **workout routine**:
+1. Warm-up
+2. Main exercise (defined by subclasses)
+3. Cool-down
 
-## How to Run
-1. Compile all files:
+---
+
+## Files and Responsibilities
+
+1. **WorkoutRoutine.java (Abstract Class)**  
+   - Contains the template method `performRoutine()`.  
+   - Implements common steps: `warmUp()` and `coolDown()`.  
+   - Declares abstract `mainExercise()` for subclasses.
+
+2. **CardioWorkout.java (Concrete Subclass)**  
+   - Implements `mainExercise()` as **20 minutes of running**.
+
+3. **StrengthWorkout.java (Concrete Subclass)**  
+   - Implements `mainExercise()` as **15 minutes of weight training**.
+
+4. **Client.java**  
+   - Demonstrates the Template Method pattern.  
+   - Creates instances of `CardioWorkout` and `StrengthWorkout` and executes routines.
+
+---
+
+## How to Compile & Run
+
+1. Open a terminal in the folder containing the `.java` files.
+
+2. Compile all files:
+
 ```bash
 javac *.java
+````
+
+3. Run the client program:
+
+```bash
+java Client
+```
+
+---
+
+## Expected Output
+
+```
+Cardio Routine:
+Warming up: 5 minutes of stretching
+Main Exercise: 20 minutes of running
+Cooling down: 5 minutes of slow walking
+
+Strength Routine:
+Warming up: 5 minutes of stretching
+Main Exercise: 15 minutes of weight training
+Cooling down: 5 minutes of slow walking
+```
+
+---
+
+## Key Points
+
+* **Template Method** (`performRoutine`) defines the fixed steps of an algorithm.
+* Subclasses override only the variable step (`mainExercise`).
+* Promotes **code reuse**, **flexibility**, and **maintains consistent algorithm flow**.
+
+---
 
 
-2. Run the Main
-
-java Main
