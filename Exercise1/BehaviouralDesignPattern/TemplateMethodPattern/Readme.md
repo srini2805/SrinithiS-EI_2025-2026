@@ -14,3 +14,7 @@ In this project, the algorithm is a **workout routine**: warm-up → main exerci
 1. Compile all files:
 ```bash
 javac *.java
+
+2. Run the Main
+```bash
+java Main
