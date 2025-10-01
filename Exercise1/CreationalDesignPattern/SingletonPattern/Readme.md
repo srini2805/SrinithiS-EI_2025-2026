@@ -61,7 +61,4 @@ Both clients use the same PrinterManager instance!
 
 ---
 
- 
 
-Do you want me to prepare the zip?
-```
