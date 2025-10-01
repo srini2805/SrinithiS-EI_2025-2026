@@ -1,16 +1,10 @@
-Iterator Pattern Project
-========================
-
-Project Overview
-----------------
+Overview: 
 This project demonstrates the **Iterator Design Pattern** in Java. 
 The Iterator Pattern provides a way to access elements of a collection 
 (sequentially) without exposing the underlying implementation.
 
-
-
 Classes and Responsibilities
-----------------------------
+
 1. Song.java
    - Represents a single song with a name.
 
@@ -35,11 +29,6 @@ How to Compile & Run
 3. Run the program:
    java Main
 
-Key Points
-----------
-- The **PlaylistIterator** is private, encapsulating iteration logic.
-- **SongIterator** is public, allowing external clients to iterate without
-  knowing the internal structure of Playlist.
-- This follows the **Iterator Design Pattern** principle: decouple collection
-  from iteration logic.
+
+
 
